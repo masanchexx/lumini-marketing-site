@@ -1,88 +1,74 @@
-// 📁 src/main.jsx
-
-
-{/* SERVIÇOS */}
-<section id="servicos" className="bg-white text-purple-700 py-16 px-6">
-<h2 className="text-3xl font-bold text-center mb-10">Serviços</h2>
-
-
-<div className="max-w-3xl mx-auto space-y-6">
-<div className="p-6 rounded-xl shadow bg-purple-100">
-<h3 className="text-xl font-bold">Gestão de Redes Sociais</h3>
-<p className="mt-2">Criação de postagens e organização completa do feed.</p>
-</div>
-
-
-<div className="p-6 rounded-xl shadow bg-purple-100">
-<h3 className="text-xl font-bold">Design Profissional</h3>
-<p className="mt-2">Artes chamativas, modernas e estratégicas.</p>
-</div>
-
-
-<div className="p-6 rounded-xl shadow bg-purple-100">
-<h3 className="text-xl font-bold">Crescimento e Engajamento</h3>
-<p className="mt-2">Melhor posicionamento e mais resultados.</p>
-</div>
-</div>
-</section>
-
-
-{/* CONTATO */}
-<section id="contato" className="py-16 px-6 text-center">
-<h2 className="text-3xl font-bold mb-6">Entre em Contato</h2>
-
-
-<p className="opacity-90">Envie um email para:</p>
-<a
-href="mailto:sanchesmariaclara820@gmail.com"
-className="text-white font-bold underline text-lg"
->
-sanchesmariaclara820@gmail.com
-</a>
-</section>
-</div>
-);
-}
-
-
-// ===========================
-// 📁 src/index.css
-// ===========================
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-body {
-margin: 0;
-padding: 0;
-}
-
-
-// ===========================
-// 📁 tailwind.config.js
-// ===========================
-export default {
-content: ["./index.html", "./src/**/*.{js,jsx}"],
-theme: {
-extend: {},
-},
-plugins: [],
-};
-
-
-// ===========================
-// 📁 index.html
-// ===========================
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Lumine Marketing</title>
+border: 1px solid #b389ff;
+font-size: 14px;
+}
+button {
+margin-top: 20px;
+width: 100%;
+padding: 12px;
+border: none;
+background: #6a0dad;
+color: white;
+font-size: 16px;
+border-radius: 8px;
+cursor: pointer;
+}
+button:hover {
+opacity: 0.9;
+}
+footer {
+text-align: center;
+padding: 20px;
+font-size: 14px;
+opacity: 0.8;
+}
+</style>
 </head>
-<body class="bg-purple-700">
-<div id="root"></div>
-<script type="module" src="/src/main.jsx"></script>
+<body>
+
+
+<header>
+<h1>Lumini Marketing</h1>
+<p>Agende atendimento, contrate serviços ou tire dúvidas rapidamente.</p>
+<p>Email: sanchesmariaclara820@gmail.com | Instagram: @luminimarketingg</p>
+</header>
+
+
+<div class="container">
+<h2>Formulário de Contato</h2>
+<form action="mailto:sanchesmariaclara820@gmail.com" method="POST" enctype="text/plain">
+
+
+<label>Nome:</label>
+<input type="text" name="Nome" required />
+
+
+<label>Telefone:</label>
+<input type="text" name="Telefone" required />
+
+
+<label>Email:</label>
+<input type="email" name="Email" required />
+
+
+<label>Selecione o serviço:</label>
+<select name="Serviço">
+<option>Agendar atendimento</option>
+<option>Contratar serviços</option>
+<option>Tirar dúvidas</option>
+<option>Montagem de fichas</option>
+</select>
+
+
+<label>Mensagem:</label>
+<textarea name="Mensagem" rows="4"></textarea>
+
+
+<button type="submit">Enviar</button>
+</form>
+</div>
+
+
+<footer>© 2025 Lumini Marketing - Site simples e profissional</footer>
 </body>
 </html>
